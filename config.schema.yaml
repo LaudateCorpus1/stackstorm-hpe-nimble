@@ -1,0 +1,15 @@
+---
+ipaddress:
+  description: "IP address of the Nimble array (e.g.: 'fqdn.to.device' or '10.10.10.10')"
+  type: "string"
+  secret: false
+  required: true
+username:
+  description: "Username for Nimble"
+  type: "string"
+  required: true
+password:
+  description: "Password for Nimble"
+  type: "string"
+  secret: true
+  required: true

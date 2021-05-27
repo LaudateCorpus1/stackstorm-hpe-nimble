@@ -1,0 +1,11 @@
+---
+name: process_events
+pack: hpenimble
+description: Set the process flag in the mongo database for events to yes
+runner_type: python-script
+entry_point: process_events.py
+enabled: true
+parameters:
+  events:
+    required: true
+    type: array

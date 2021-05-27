@@ -1,0 +1,15 @@
+version: 1.0
+
+description: A workflow to copy hpe nimble alarms into a mongo database.
+
+tasks:
+  getalarms:
+    action: hpenimble.get_alarms
+    next:
+      - when: <% succeeded() %>
+        publish:
+          - alarms: <% result().result %>
+        do: sendmongo
+
+  sendmongo:
+    action: hpenimble.load-hpe-nimble-alarms alarms=<% ctx().alarms %>

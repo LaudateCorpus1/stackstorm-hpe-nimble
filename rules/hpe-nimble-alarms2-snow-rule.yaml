@@ -1,0 +1,13 @@
+---
+name: "hpe-nimble-alarms2-snow-rule"
+description: "Get HPE Nimble alarms and send to service now."
+enabled: false
+
+trigger:
+  type: "core.st2.IntervalTimer"
+  parameters:
+    delta: 5
+    unit: minutes
+
+action:
+  ref: "hpenimble.mongo-alarms2-snow"

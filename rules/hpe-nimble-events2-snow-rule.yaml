@@ -1,0 +1,13 @@
+---
+name: "hpe-nimble-events2-snow-rule"
+description: "Get HPE Nimble events and send to service now."
+enabled: false
+
+trigger:
+  type: "core.st2.IntervalTimer"
+  parameters:
+    delta: 5
+    unit: minutes
+
+action:
+  ref: "hpenimble.mongo-events2-snow"

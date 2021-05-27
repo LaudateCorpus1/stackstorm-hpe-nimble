@@ -1,0 +1,11 @@
+---
+name: load-hpe-nimble-events
+pack: hpenimble
+description: build mongo db of real time events on nimble
+runner_type: python-script
+entry_point: load-hpe-nimble-events.py
+enabled: true
+parameters:
+  events:
+    required: true
+    type: array

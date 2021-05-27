@@ -1,0 +1,6 @@
+---
+name: get-hpe-nimble-events
+description: A workflow for getting hpe nimble events into a mongo database.
+runner_type: orquesta
+entry_point: workflows/get-hpe-nimble-events.yaml
+enabled: true

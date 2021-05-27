@@ -1,0 +1,7 @@
+---
+name: get_mongo_events
+pack: hpenimble
+description: Get an non-processed event entries from mongo database
+runner_type: python-script
+entry_point: get_mongo_events.py
+enabled: true

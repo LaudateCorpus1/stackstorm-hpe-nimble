@@ -1,0 +1,7 @@
+---
+name: get_events
+pack: hpenimble
+description: Get an array of events from the nimble array
+runner_type: python-script
+entry_point: get_events.py
+enabled: true

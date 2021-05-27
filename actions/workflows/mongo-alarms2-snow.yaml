@@ -1,0 +1,22 @@
+version: 1.0
+
+description: A workflow to copy hpe Nimble alarms from mongo and into snow..
+
+tasks:
+  getalerts:
+    action: hpenimble.get_mongo_alarms
+    next:
+      - when: <% succeeded() %>
+        publish:
+          - alarms: <% result().result %>
+        do: snowalerts
+
+  snowalerts:
+    with: <% ctx().events %>
+    action: servicenow.create_record table="u_nimble_alarms" payload='<% item() %>'
+    next:
+      - when: <% succeeded() %>
+        do: processevents
+
+  processevents:
+    action: hpenimble.process_alarms alarms=<% ctx().alarms %>

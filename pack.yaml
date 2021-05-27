@@ -1,0 +1,12 @@
+---
+ref: hpenimble
+name: hpenimble
+description: HPE Nimble Integration Pack
+keywords:
+  - HPE Nimble
+  - Alletra
+version: 0.1.0
+python_versions:
+  - "3"
+author: Rick Kauffman
+email: rick.a.kauffman@hpe.com

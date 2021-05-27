@@ -1,0 +1,13 @@
+---
+name: "hpenimble-alarms"
+description: "Get HPE Nimble alarms and load mongo databases."
+enabled: false
+
+trigger:
+  type: "core.st2.IntervalTimer"
+  parameters:
+    delta: 5
+    unit: minutes
+
+action:
+  ref: "hpenimble.get-hpe-nimble-alarms"

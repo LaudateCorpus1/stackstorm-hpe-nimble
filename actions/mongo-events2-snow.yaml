@@ -1,0 +1,6 @@
+---
+name: mongo-events2-snow
+description: A workflow for sending nimble events from mongo to servicenow.
+runner_type: orquesta
+entry_point: workflows/mongo-events2-snow.yaml
+enabled: true

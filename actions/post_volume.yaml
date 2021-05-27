@@ -1,0 +1,23 @@
+---
+name: post_volume
+pack: hpenimble
+description: Post a volume to nimble
+runner_type: python-script
+entry_point: post_volume.py
+enabled: true
+parameters:
+  name:
+    type: "string"
+    description: "The vlan group name"
+    required: true
+    position: 0
+  size:
+    type: "integer"
+    description: "The volume size"
+    required: true
+    position: 1
+  limit_iops:
+    type: "integer"
+    description: "The volume iops limit"
+    required: true
+    position: 2

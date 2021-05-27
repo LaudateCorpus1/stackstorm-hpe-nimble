@@ -1,0 +1,7 @@
+---
+name: get_alarms
+pack: hpenimble
+description: Get an array of alarms from the nimble array
+runner_type: python-script
+entry_point: get_alarms.py
+enabled: true

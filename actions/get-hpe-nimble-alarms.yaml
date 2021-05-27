@@ -1,0 +1,6 @@
+---
+name: get-hpe-nimble-alarms
+description: A workflow for getting hpe nimble alarms into a mongo database.
+runner_type: orquesta
+entry_point: workflows/get-hpe-nimble-alarms.yaml
+enabled: true

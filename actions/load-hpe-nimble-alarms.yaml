@@ -1,0 +1,11 @@
+---
+name: load-hpe-nimble-alarms
+pack: hpenimble
+description: build mongo db of real time alarms on nimble
+runner_type: python-script
+entry_point: load-hpe-nimble-alarms.py
+enabled: true
+parameters:
+  alarms:
+    required: true
+    type: array
