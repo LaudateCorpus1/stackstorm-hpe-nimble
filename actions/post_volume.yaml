@@ -16,8 +16,3 @@ parameters:
     description: "The volume size"
     required: true
     position: 1
-  limit_iops:
-    type: "integer"
-    description: "The volume iops limit"
-    required: true
-    position: 2

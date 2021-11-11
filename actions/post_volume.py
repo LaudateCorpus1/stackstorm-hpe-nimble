@@ -22,10 +22,10 @@
 from lib.actions import HpeNimbleBaseAction
 
 class Volumes(HpeNimbleBaseAction):
-    def run(self,name=None,size=None,limit_iops=None):
+    def run(self,name=None,size=None):
         vol = 'fail'
         volz = self.client.volumes.get(name=name)
         if volz is None:
             #
-            vol = self.client.volumes.create(name=name, size=size, limit_iops=limit_iops)
+            vol = self.client.volumes.create(name=name, size=size, limit_iops=12000)
         return (vol)
